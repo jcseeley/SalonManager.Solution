@@ -13,7 +13,7 @@
 }
 else
 {
-  <h2>@Html.DisplayFor(model => model.StylistName)'s Clients:</h2>
+  <h2>Clients:</h2>
   @foreach(Client client in Model.Clients)
   {
     <h3>@Html.ActionLink($"{client.ClientName}", "Details", "Clients", new { id = client.ClientId })</h3>
