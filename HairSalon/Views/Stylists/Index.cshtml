@@ -5,20 +5,18 @@
 @using HairSalon.Models;
 @model List<HairSalon.Models.Stylist>;
 
-<h2 class="stylist">Stylists:</h2>
+<h1>Stylists:</h1>
+<hr />
 @if (@Model.Count == 0)
 {
-  <h3 class="stylist">There are no Stylists at your salon.</h3>
+  <h2>No Stylists available.</h2>
 }
 else
 {
-  <div class="card stylistCard">
-    <ul>
-      @foreach (Stylist stylist in Model)
-      {
-        <li class="listItem">@Html.ActionLink($"{stylist.StylistName}", "Details", new { id = stylist.StylistId })</li>
-      }
-    </ul>
-  </div>
+  @foreach (Stylist stylist in Model)
+  {
+    <h3>@Html.ActionLink($"{stylist.StylistName}", "Details", new { id = stylist.StylistId })</h3><br>
+  }
 }
-<p class="stylist">@Html.ActionLink("Add a Stylist", "Create")</p>
+<hr />
+<h4>@Html.ActionLink("Add a Stylist", "Create")</h4>

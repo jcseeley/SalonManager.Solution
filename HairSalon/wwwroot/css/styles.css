@@ -1,21 +1,7 @@
-.homePage {
+body {
   text-align: center;
 }
 
-.stylistCard {
-  margin-left: 25vw;
-  margin-right: 25vw;
-}
-
-.stylist {
-  text-align: center;
-}
-
-ul {
-  list-style-position: inside;
-}
-
-.listItem {
-  text-align: center;
-  margin-right: 3vw;
+h1 {
+  text-decoration: underline;
 }
