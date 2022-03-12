@@ -23,15 +23,35 @@ A user friendly web application for salon owners to manage stylists and their cl
 ## Setup/Installation Requirements
 
 * Clone this repository to your desktop.
-* Open MySQLWorkbench and click "Local instance 3306".
-* Expand the window to uncover any hidden buttons.
-* Under the "Administration" tab, click "Data Import/Restore".
-* Select "Import from Self-Contained file".
-* To the right of the form field, click the box with ".." in it and navigate to the top level of this directory. Select the "jase_seeley.sql" file.
-* Under "Default Target Schema", click the "New..." button, enter a name for your schema, and click "OK".
-* Click the "Start Import" button.
-* When the import is complete, navigate to the "Schemas" tab.
-* 
+
+### Import the Database:
+1. Open MySQLWorkbench and click "Local instance 3306".
+2. Expand the window to uncover any hidden buttons.
+3. Under the "Administration" tab, click "Data Import/Restore".
+4. Select "Import from Self-Contained file".
+5. To the right of the form field, click the box with ".." in it and navigate to the top level of this directory. Select the "jase_seeley.sql" file.
+6. Under "Default Target Schema", click the "New..." button, enter "jase_seeley" as the schema name and click "OK". Alternatively, you may name this file whatever you prefer but make sure it matches the "database" name in the "appsettings.json" file. (See below)
+7. Click the "Start Import" button.
+8. When the import is complete, navigate to the "Schemas" tab.
+9. Right click under the list of schemas and select "Refresh All".
+10. Your new schema should now appear on the list.
+
+### Add the "appsettings.json" file:
+1. Open the "SalonManager.Solution" folder in your code editor.
+2. Right click on the "HairSalon" project folder and select "New File".
+3. Enter "appsettings.json" in the text box and press "Enter/Return".
+4. Double click the file to open it in your editor.
+5. Copy and paste the code below into the file.
+<pre>{  
+  "ConnectionStrings": {  
+    "DefaultConnection": "Server=localhost;Port=3306;database=jase_seeley;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"  
+  }  
+}</pre>
+6. Confirm the "database" name matches the schema file from above.
+7. Change the "USERNAME" and "PASSWORD" to match your MySQL information.
+8. Save and close the file.
+
+### Building and running the application:
 * Navigate to the "HairSalon" project directory in your terminal.
 * Enter "dotnet restore" to install the required packages.
 * Enter "dotnet build" to build the project.
