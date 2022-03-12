@@ -1,7 +1,16 @@
 body {
+  background-image: url(https://images.unsplash.com/photo-1626383137804-ff908d2753a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+  background-position: top;
+  background-size: auto 850px;
+  background-repeat: no-repeat;
+  background-color: black;
   text-align: center;
 }
 
 input {
   text-align: center;
+}
+
+.container {
+  max-width: 375px;
 }

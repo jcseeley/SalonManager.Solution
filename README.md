@@ -30,7 +30,7 @@ A user friendly web application for salon owners to manage stylists and their cl
 3. Under the "Administration" tab, click "Data Import/Restore".
 4. Select "Import from Self-Contained file".
 5. To the right of the form field, click the box with ".." in it and navigate to the top level of this directory. Select the "jase_seeley.sql" file.
-6. Under "Default Target Schema", click the "New..." button, enter "jase_seeley" as the schema name and click "OK". Alternatively, you may name this file whatever you prefer but make sure it matches the "database" name in the "appsettings.json" file. (See below)
+6. Under "Default Target Schema", click the "New..." button, enter "jase_seeley" as the schema name and click "OK". Alternatively, you may name this whatever you prefer but make sure it matches the "database" name in the "appsettings.json" file. (See below)
 7. Click the "Start Import" button.
 8. When the import is complete, navigate to the "Schemas" tab.
 9. Right click under the list of schemas and select "Refresh All".
@@ -47,7 +47,7 @@ A user friendly web application for salon owners to manage stylists and their cl
     "DefaultConnection": "Server=localhost;Port=3306;database=jase_seeley;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"  
   }  
 }</pre>
-6. Confirm the "database" name matches the schema file from above.
+6. Confirm the "database" name matches the schema name from above.
 7. Change the "USERNAME" and "PASSWORD" to match your MySQL information.
 8. Save and close the file.
 
