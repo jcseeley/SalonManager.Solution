@@ -1,10 +1,14 @@
 body {
   background-image: url(https://images.unsplash.com/photo-1546387903-6d82d96ccca6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);
   background-position: top;
-  background-size: auto 850px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
   text-align: center;
+  font-family: 'Roboto Serif', serif;
+  font-family: 'Sansita Swashed', cursive;
+  font-size: x-large;
+  color: darkolivegreen;
 }
 
 input {
@@ -12,5 +16,24 @@ input {
 }
 
 .container {
-  max-width: 375px;
+  margin-top: 10%;
+  margin-left: 40%;
+  max-width: 45%;
+}
+
+a {
+  color: cadetblue;
+}
+
+a:hover {
+  color: olive;
+}
+
+button {
+  background-color: bisque;
+  font-size: large;
+}
+
+hr {
+  border: 1px solid darkolivegreen;
 }

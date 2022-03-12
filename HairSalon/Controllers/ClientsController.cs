@@ -1,9 +1,10 @@
-using Microsoft.EntityFrameworkCore;
+using HairSalon.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using HairSalon.Models;
+
 
 namespace HairSalon.Controllers
 {
@@ -19,6 +20,7 @@ namespace HairSalon.Controllers
     public ActionResult Index()
     {
       List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
+      ViewBag.PageTitle = "Clients";
       return View(model);
     }
 
@@ -48,6 +50,7 @@ namespace HairSalon.Controllers
     {
       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
+      ViewBag.PageTitle = "Edit Client";
       return View(thisClient);
     }
 
@@ -62,6 +65,7 @@ namespace HairSalon.Controllers
     public ActionResult Delete(int id)
     {
       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      ViewBag.PageTitle = "Delete Client";
       return View(thisClient);
     }
 

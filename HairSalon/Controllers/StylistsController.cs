@@ -1,8 +1,8 @@
-using Microsoft.EntityFrameworkCore;
+using HairSalon.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using HairSalon.Models;
 
 namespace HairSalon.Controllers
 {
@@ -24,7 +24,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Create()
     {
-      ViewBag.PageTitle = "Add a Stylist";
+      ViewBag.PageTitle = "Add Stylist";
       return View();
     }
 
@@ -61,6 +61,7 @@ namespace HairSalon.Controllers
     public ActionResult Delete(int id)
     {
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      ViewBag.PageTitle = "Delete Stylist";
       return View(thisStylist);
     }
 
