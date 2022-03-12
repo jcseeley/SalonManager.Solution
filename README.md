@@ -23,6 +23,14 @@ A user friendly web application for salon owners to manage stylists and their cl
 ## Setup/Installation Requirements
 
 * Clone this repository to your desktop.
+* Open MySQLWorkbench and click "Local instance 3306".
+* Expand the window to uncover any hidden buttons.
+* Under the "Administration" tab, click "Data Import/Restore".
+* Select "Import from Self-Contained file".
+* To the right of the form field, click the box with ".." in it and navigate to the top level of this directory. Select the "jase_seeley.sql" file.
+* Under "Default Target Schema", click the "New..." button, enter a name for your schema, and click "OK".
+* Click the "Start Import" button.
+* When the import is complete, navigate to the "Schemas" tab.
 * 
 * Navigate to the "HairSalon" project directory in your terminal.
 * Enter "dotnet restore" to install the required packages.
