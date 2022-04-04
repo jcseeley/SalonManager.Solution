@@ -2,7 +2,8 @@
 
 #### By Jase Seeley
 
-#### A web application to keep track of your hair stylists and their clients.
+#### Epicodus Week #10 Independent Code Review: Database Basics  
+* A web application to keep track of your hair stylists and their clients.
 
 ## Technologies Used
 * C#
